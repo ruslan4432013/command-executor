@@ -2,7 +2,7 @@
   "name": "command-executor",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "inquirer": "^9.1.4",
+    "node-fetch": "^3.3.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
   },

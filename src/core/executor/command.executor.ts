@@ -1,13 +1,13 @@
-import {IStreamLogger} from "../handlers/stream-logger.interface";
 import {ChildProcessWithoutNullStreams} from "child_process";
-import {ICommandExec} from "./command.types";
+import {ICommandExec} from "./command.types.js";
+import {IStreamLogger} from "../handlers/stream-logger.interface.js";
 
-abstract class CommandExecutor<Input> {
+export abstract class CommandExecutor<Input> {
 
     constructor(private logger: IStreamLogger) {
     }
 
-    protected abstract prompt(...args: any[]): Promise<Input>
+    protected abstract prompt(): Promise<Input>
 
     protected abstract build(input: Input): ICommandExec
 
